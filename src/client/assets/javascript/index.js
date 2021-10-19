@@ -324,10 +324,18 @@ function defaultFetchOpts() {
 
 function getTracks() {
   // GET request to `${SERVER}/api/tracks`
+  return fetch(`${SERVER}/api/tracks`)
+      .then((response) => {
+        return response.json();
+      });
 }
 
 function getRacers() {
   // GET request to `${SERVER}/api/cars`
+  return fetch(`${SERVER}/api/cars`)
+      .then((response) => {
+        return response.json();
+      });
 }
 
 function createRace(player_id, track_id) {
